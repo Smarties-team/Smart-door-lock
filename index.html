@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <link rel="icon" href="assets/logo.png"> -->
+    <title>Smart lock</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+
+
+</head>
+
+<body>
+
+
+    <!-- Navigation bar -->
+    <nav class="container-fluid  navbar navbar-expand-sm navbar-dark bg-dark">
+
+        <!-- Logo -->
+        <a class="me-5" href="/"><img height="50px" src="assets/logo.png" alt="Logo image" /></a>
+
+        <!-- Navigation bar toggler for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Togglable content -->
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link  active" href="/">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="/control.html" class="nav-link">Control</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact.html">Contact us</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Test labs Project Proposal -->
+
+    <h1 class="d-flex justify-content-center my-5">Face recognition door lock system</h1>
+
+
+    <div class="mx-5">
+        <h2>Introduction</h2>
+        <p> Electronic security locks are replacing traditional mechanicals locks for their ease of use, security,
+            flexibility and they provide us very important features such as remote or automatic control and
+            intrusion alarms.
+            <br>
+            I think the electronic security lock consists of 3 main components: Authorization, lock/unlock mechanism
+            and intrusion alarm.
+            <br>
+            In this project, We will be studying and implementing an efficient authorization method for the
+            electronic security lock.
+            <br>
+            There are many authorization methods for electronic lock such as
+        </p>
+        <ol class="w-75">
+            <li>
+                Using a <strong>keypad</strong> to get a password from the user and match it with the preset
+                password.
+                <br>
+                This approach is very cheap, but it is not very efficient as it takes some time for the user to
+                enter the password, the password could be leaked or guessed, or the user might forget the password!
+            </li>
+            <li>
+                Using a <strong>fingerprint</strong> sensor to get the users’ fingerprint and match it with the
+                preset fingerprints of the authorized users.
+                <br>
+                This is a better approach from the last one, It’s easier, user friendly and very secure. But still
+                the user has to put his finger in the sensor, and it has a high cost. (A retinal scanning is a
+                similar approach)
+            </li>
+            <li>
+                Using a <strong>camera</strong> to get the users’ face and match it with the stored photos of the
+                authorized users.
+                <br>
+                This approach is the easiest as the lock automatically opens once the user gets closer. It provides
+                good security, but it is less secure than fingerprint approach, it doesn’t cost much, it provides
+                extra features such as 24 hours surveillance and logging. I will use this method for my project.
+            </li>
+
+        </ol>
+
+        <br>
+
+        <div class="row">
+
+            <div class="col-sm-7">
+                <p>
+                    To do this we will need to use computer vision to detect all the faces in the photos taken by
+                    the
+                    camera
+                    and match them with the authorized users’ faces stored in the database.
+                    We will also add some extra features to make this lock remotely controlled, by streaming this
+                    camera
+                    output to some online platform on the internet and providing the lock owners with a UI in this
+                    platform
+                    to control the lock from anywhere.
+                </p>
+            </div>
+
+            <div class="col-sm-5">
+                <img src="assets/doorlock_img1.jpg" class="w-100" />
+            </div>
+
+        </div>
+        <br>
+
+
+        <h2>Objectives</h2>
+        <ul>
+            <li>Identifying users’ faces.</li>
+            <li>Automatic unlocking for the authorized users.</li>
+            <li>Detecting intrusion and sounding the alarm.</li>
+            <li>Lock surveillance from anywhere in the world.</li>
+            <li>Remote control of the lock. </li>
+            <li>Logging users’ entrance timing.</li>
+        </ul>
+
+        <br>
+
+        <h2>Main components</h2>
+
+        <ul>
+            <li>ESP32-CAM</li>
+            <li>FTDI</li>
+            <li>LED (simulates the door lock state)</li>
+            <li>Buzzer</li>
+        </ul>
+
+    </div>
+
+    <br>
+    <hr>
+
+
+
+
+    <footer class="mx-5">
+
+        <h5>References</h5>
+        <a href="https://en.wikipedia.org/wiki/Electronic_lock">https://en.wikipedia.org/wiki/Electronic_lock</a>
+
+        <br>
+        <br>
+
+        <h5>Team members</h5>
+
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">
+                Diaa Eldeen Esmail Ahmed
+            </li>
+            <li class="list-group-item">
+                Muhammed Ali Sayed
+            </li>
+        </ul>
+
+        <br>
+
+    </footer>
+
+</body>
+
+</html>
